@@ -11,9 +11,9 @@ y = r
 x = c
 
 if d == "U":
-    dir = 2
-elif d == "D":
     dir = 0
+elif d == "D":
+    dir = 2
 elif d == "R":
     dir = 1
 elif d == "L":
@@ -22,6 +22,8 @@ elif d == "L":
 for i in range(t):
     ny = y + dy[dir]
     nx = x + dx[dir]
+
+    #print(ny,nx)
 
     if ny < 1 or ny > n or nx < 1 or nx > n:
         dir = (dir+2) %4
