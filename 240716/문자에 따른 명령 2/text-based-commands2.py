@@ -1,10 +1,10 @@
 str = input()
 str = list(str)
 
-dx = [-1, 0, 1, 0]
-dy = [0, 1, 0 ,-1]
+dy = [-1, 0, 1, 0]
+dx = [0, 1, 0 ,-1]
 
-dir = 3
+dir = 2
 x = 0
 y = 0
 
