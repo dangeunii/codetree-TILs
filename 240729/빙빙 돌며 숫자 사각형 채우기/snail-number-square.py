@@ -4,13 +4,13 @@ dy = [0, 1, 0, -1]
 dx = [1, 0, -1, 0]
 
 def check(x,y):
-    if x <0 or x>= n or y <0 or y >=m:
+    if x <0 or x>= m or y <0 or y >=n:
         return 1
     else:
         return 0
 
-mapp = [[ 0 for row in range(n)]for col in range(m)]
-visited = [[0 for row in range(n)]for col in range(m)]
+mapp = [[ 0 for row in range(m)]for col in range(n)]
+visited = [[0 for row in range(m)]for col in range(n)]
 dir = 0
 x=0
 y=0
@@ -29,7 +29,8 @@ for i in range(1,n*m):
     visited[ny][nx] = 1
     y =ny
     x=nx
-    
+
+#print(mapp)
 for i in range(n):
     num =mapp[i]
     print(' '.join(map(str, num)))
