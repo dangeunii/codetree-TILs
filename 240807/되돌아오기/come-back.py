@@ -45,3 +45,8 @@ for i in range(N):
             if y == 0 and x == 0:
                 print(cnt)
                 break
+    if y == 0 and x == 0:
+        break
+
+if y != 0 or x != 0:
+    print(-1)
