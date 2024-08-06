@@ -39,3 +39,6 @@ for i in order:
     if y == 0 and x == 0:
         print(cnt)
         break
+
+if y != 0 or x != 0:
+    print(-1)
