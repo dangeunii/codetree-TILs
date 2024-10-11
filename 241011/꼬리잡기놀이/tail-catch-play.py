@@ -148,7 +148,7 @@ for turn in range(1, k + 1):
                     idx = teams[team_n].index((i, (4 * n - m_turn)))
                     point = (idx + 1) ** 2
                     teams[team_n].reverse()
-            break
+                break
     answer += point
 
 print(answer)
