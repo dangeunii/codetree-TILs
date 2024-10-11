@@ -128,8 +128,8 @@ for turn in range(1, k + 1):
     elif 2 * n + 1 <= m_turn <= 3 * n:
         for i in range(n):
             #print("i" ,i)
-            print(3 * n - m_turn, n - i - 1)
-            print(mapp[3 * n - m_turn][n - i - 1])
+            #print(3 * n - m_turn, n - i - 1)
+            #print(mapp[3 * n - m_turn][n - i - 1])
             if mapp[3 * n - m_turn][n - i - 1] != 4 and mapp[3 * n - m_turn][n - i - 1] != 0:
                 team_n = mapp[3 * n - m_turn][n - i - 1]
                 #print(teams[team_n])
