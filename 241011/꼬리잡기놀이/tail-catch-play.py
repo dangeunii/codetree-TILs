@@ -134,7 +134,7 @@ for turn in range(1,k+1):
             if mapp[i][4*n -turn -1] != 4 and mapp[i][4*n -turn -1] != 0:
                 team = mapp[i][4*n - turn -1]
                 if (i, 4*n -turn-1) in teams[team]:
-                    idx = teams[team].index(i,4*n -turn-1)
+                    idx = teams[team].index((i,4*n -turn-1))
                     point = (idx+1) **2
                     teams[team].reverse()
             break
