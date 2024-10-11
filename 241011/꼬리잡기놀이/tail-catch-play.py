@@ -106,37 +106,39 @@ for turn in range(1,k+1):
             # team 번호
             if mapp[n-i-1][turn-n-1] != 4 and mapp[n-i-1][turn-n-1] != 0:
                 #print(n-i-1, turn-n-1)
-                team = mapp[n-i-1][turn-n-1]
+                team_n = mapp[n-i-1][turn-n-1]
 
                 #print("team: " ,teams[team])
 
                 # 그리고 그 해당 좌표의 index 찾아서 point 구하기
-                if (n-i-1,turn-n-1) in teams[team]:
-                    idx = teams[team].index(((n-i-1),(turn-n-1)))
+                if (n-i-1,turn-n-1) in teams[team_n]:
+                    idx = teams[team_n].index(((n-i-1),(turn-n-1)))
                     #print(idx)
                     point = (idx+1) **2
                     ## 해당 팀의 머리 꼬리 변경
-                    teams[team].reverse()
+                    teams[team_n].reverse()
                 #print("point: ", point)
                 break
     elif 2 * n + 1 <= turn <= 3 * n:
         for i in range(n):
-            if mapp[3*n - turn - 1][n-i-1] != 4 and mapp[3*n - turn - 1] [n-i-1] != 0:
-               team = mapp[3*n-turn -1][n-i-1]
-               if ((3*n - turn - 1),(n-i-1)) in teams[team]:
-                   idx = teams[team].index((3*n - turn - 1),(n-i-1))
-                   point = (idx+1) ** 2
-                   teams[team].reverse()
+            if mapp[3*n - turn][n-i-1] != 4 and mapp[3*n - turn] [n-i-1] != 0:
+                #print(3 * n - turn, n - i - 1)
+                team_n = mapp[3*n-turn][n-i-1]
+                #print(teams[team_n])
+                if (3*n - turn,n-i-1) in teams[team_n]:
+                    idx = teams[team_n].index(((3*n - turn),(n-i-1)))
+                    point = (idx+1) ** 2
+                    teams[team_n].reverse()
             break
 
     elif 3 * n + 1 <= turn <= 4 * n:
         for i in range(n):
-            if mapp[i][4*n -turn -1] != 4 and mapp[i][4*n -turn -1] != 0:
-                team = mapp[i][4*n - turn -1]
-                if (i, 4*n -turn-1) in teams[team]:
-                    idx = teams[team].index((i,4*n -turn-1))
+            if mapp[i][4*n -turn] != 4 and mapp[i][4*n -turn] != 0:
+                team_n = mapp[i][4*n - turn]
+                if (i,4*n -turn) in teams[team_n]:
+                    idx = teams[team_n].index((i,(4*n -turn)))
                     point = (idx+1) **2
-                    teams[team].reverse()
+                    teams[team_n].reverse()
             break
     answer += point
 
